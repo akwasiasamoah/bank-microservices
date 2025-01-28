@@ -14,3 +14,22 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  config:
+    import:
+      - classpath:application_qa.yml
+      - classpath:application_prod.yml
+  profiles:
+    active:
+      - "qa"
+
+build:
+  version: "3.0"
+
+cards:
+  message: "Welcome to EazyBank cards related local APIs "
+  contactDetails:
+    name: "George Williams - Developer"
+    email: "george@eazybank.com"
+  onCallSupport:
+    - (412) 419-3491
+    - (915) 382-1932
