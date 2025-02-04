@@ -45,7 +45,7 @@ services:
       service: network-deploy-service
 
   configserver:
-    image: "kubeasamoah/configserver:s6"
+    image: "kubeasamoah/configserver:s7"
     container_name: configserver-ms
     ports:
       - "8071:8071"
@@ -63,7 +63,7 @@ services:
       service: microservice-base-config
 
   accounts:
-    image: "kubeasamoah/accounts:s6"
+    image: "kubeasamoah/accounts:s7"
     container_name: accounts-ms
     ports:
       - "8080:8080"
@@ -80,7 +80,7 @@ services:
       service: microservice-configserver-config
 
   loans:
-    image: "kubeasamoah/loans:s6"
+    image: "kubeasamoah/loans:s7"
     container_name: loans-ms
     ports:
       - "8090:8090"
@@ -97,7 +97,7 @@ services:
       service: microservice-configserver-config
 
   cards:
-    image: "kubeasamoah/cards:s6"
+    image: "kubeasamoah/cards:s7"
     container_name: cards-ms
     ports:
       - "9000:9000"
