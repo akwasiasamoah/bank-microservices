@@ -8,6 +8,7 @@ services:
     extends:
       file: common-config.yml
       service: microservice-db-config
+
   loansdb:
     container_name: loansdb
     ports:
