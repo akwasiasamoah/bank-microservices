@@ -18,6 +18,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
 @EnableConfigurationProperties(value = {CardsContactInfoDto.class})
 
+
 @OpenAPIDefinition(
 		info = @Info(
 				title = "Cards microservice REST API Documentation",
