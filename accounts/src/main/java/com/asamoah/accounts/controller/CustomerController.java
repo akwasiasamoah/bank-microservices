@@ -1,6 +1,5 @@
 package com.asamoah.accounts.controller;
 
-import com.asamoah.accounts.service.ICustomersService;
 import com.asamoah.accounts.dto.CustomerDetailsDto;
 import com.asamoah.accounts.dto.ErrorResponseDto;
 import com.asamoah.accounts.service.ICustomersService;
@@ -57,8 +56,9 @@ public class CustomerController {
     public ResponseEntity<CustomerDetailsDto> fetchCustomerDetails(@RequestHeader("eazybank-correlation-id") String correlationId, @RequestParam
                                                                    @Pattern(regexp="(^$|[0-9]{10})",message = "Mobile number must be 10 digits")
                                                                    String mobileNumber){
-        logger.debug("eazyBank-Correlation-Id found: {}", correlationId);
+        logger.debug("fetchCustomerDetails method start");
         CustomerDetailsDto customerDetailsDto = customersService.fetchCustomerDetails(mobileNumber,correlationId);
+        logger.debug("fetchCustomerDetails method end");
         return ResponseEntity.status(HttpStatus.SC_OK).body(customerDetailsDto);
 
     }
