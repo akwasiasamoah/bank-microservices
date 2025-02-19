@@ -36,6 +36,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 				url = "https://www.linkedin.com/in/emmanuel-akwasi-asamoah-7b1b3b1b3/"
 		)
 )
+
 public class AccountsApplication {
 
 	public static void main(String[] args) {
